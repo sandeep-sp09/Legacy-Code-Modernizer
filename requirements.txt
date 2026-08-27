@@ -1,0 +1,10 @@
+tree-sitter
+tree-sitter-languages
+networkx
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+anthropic
+matplotlib
+pytest
