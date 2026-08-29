@@ -1,10 +1,11 @@
 tree-sitter
-tree-sitter-languages
+tree-sitter-c
+tree-sitter-pascal
 networkx
 fastapi
 uvicorn[standard]
 python-multipart
 pydantic
-anthropic
 matplotlib
 pytest
+requests
