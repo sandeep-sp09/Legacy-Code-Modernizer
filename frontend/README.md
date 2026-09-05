@@ -55,35 +55,6 @@ The frontend communicates with the FastAPI service:
 - `POST /process/{file_id}` &mdash; Executes AST extraction, dependency graph generation, and LLM modernizer pipeline.
 - `GET /result/{file_id}` &mdash; Retrieves cached processing results.
 
-## Upload only the browser frontend to GitHub
 
-For a frontend-only GitHub repository, upload these three files:
 
-```text
-index.html
-style.css
-app.js
-```
 
-Do not upload `backend/`, `.venv/`, `__pycache__/`, tests, or `frontend/app.py` unless
-you also want to publish the optional Streamlit application. The browser frontend
-works without the backend: it automatically uses the local Offline Demo Mode and
-shows a notification when FastAPI is unavailable.
-
-### GitHub upload from the command line
-
-From inside the `frontend` directory:
-
-```bash
-git init
-git add index.html style.css app.js
-git commit -m "Add frontend web application"
-git branch -M main
-git remote add origin https://github.com/<your-user>/<your-repository>.git
-git push -u origin main
-```
-
-Replace the placeholder repository URL with your GitHub repository URL. To run
-the uploaded frontend locally, use a static server (for example
-`python -m http.server 3000`) from the same directory and open
-`http://localhost:3000`.
